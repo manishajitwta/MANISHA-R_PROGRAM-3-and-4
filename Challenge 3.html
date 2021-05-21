@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Text Shrink</title>
+<style>
+ p {
+position: absolute;
+top: 10%;
+left: 70%;
+}
+.ocean img{
+ width: 250px;
+ margin-left:40px;
+}
+.text{
+ margin: 20px;
+}
+.stars img{
+ width: 15px;
+}
+.text{
+ font-size:12px;
+}
+.stars{
+ font-size:12px;
+}
+.nav{
+ font-size:12px;
+}
+.nav1{
+ font-size:12px;
+}
+</style>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+var var1 = setInterval(inTimer, 500);
+var fs = 5; //font size
+var ids = document.getElementById("demo");
+function inTimer()
+{
+ids.innerHTML = 'OCEAN THERAPY';
+ids.setAttribute('style', "font-size: " + fs + "px; color: red");
+fs += 5;
+if (fs >= 50)
+{
+clearInterval(var1); //paused
+var2 = setInterval(deTimer, 500); }
+}
+function deTimer() //fs = 50px
+{
+fs -= 5;
+ids.innerHTML = 'OCEAN THERAPY';
+ids.setAttribute('style', "font-size: " + fs + "px; color: blue");
+if (fs == 5)
+{
+clearInterval(var2); //paused
+var1 = setInterval(inTimer, 500);
+}
+}
+</script>
+<div class="nav">
+ <a href="#">Home</a>
+ <a href="#">Places</a>
+ <a href="#">Gallery</a>
+ <a href="#">AboutUs</a>
+ <a href="#">Search</a> <br>
+ <h3>Malpe Beach, Udupi</h3>
+</div>
+<div class="ocean">
+ <img src="Beach.jpg" alt="">
+</div>
+<div class="text">
+ by <a href="#">Manisha R</a> <br><br>
+ Malpe is a natural port in the Udupi District in Karnataka, India located at the mouth of the Malpe River about six
+kilometers to the west of Udupi, it is an important port and a major fishing harbour on the Karnataka Coast. The town of
+Malpe is associated largely with settlements of the Mogaveera fisherman community.<br><br>
+ Year 2021 <br>
+ Date May 21 <br>
+ <h3>Reviews</h3>
+</div>
+<div class="stars">
+ <strong> Love Click</strong> <br> Jaya
+ <img src="orange.png" alt="">
+ <img src="orange.png" alt="">
+ <img src="orange.png" alt="">
+ <img src="grey.png" alt="">
+ <img src="grey.png" alt=""> <br>
+ <small>That Was An Amazing Evening</small>
+ <hr> <br>
+ <strong> We Missed It</strong> <br> Cifha
+ <img src="orange.png" alt="">
+ <img src="orange.png" alt="">
+ <img src="orange.png" alt="">
+ <img src="orange.png" alt="">
+ <img src="orange.png" alt=""> <br>
+ <small>Such a Lovely Visuals We Missed it</small>
+ <hr> <br>
+ <strong> Nice</strong> <br>Fiona
+ <img src="orange.png" alt="">
+ <img src="orange.png" alt="">
+ <img src="orange.png" alt="">
+ <img src="grey.png" alt="">
+ <img src="grey.png" alt=""> <br>
+ <small>Good One</small>
+ <hr>
+</div>
+<div class="nav1">
+ <a href="#">Home</a>
+ <a href="#">Places</a>
+ <a href="#">Gallery</a>
+ <a href="#">AboutUs</a>
+ <a href="#">Search</a>
+ <h5>Copyright 2020 My Casual Stay</h5>
+</div>
+</body>
+</html>
